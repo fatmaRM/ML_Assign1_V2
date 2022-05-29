@@ -36,39 +36,6 @@ predicted_labels = model.predict(testing_articles)
 print("SVM accuracy ",accuracy_score(testing_labels,predicted_labels))
 
 
-# In[16]:
-
-
-#from sklearn.metrics import confusion_matrix
-#conf_mat = confusion_matrix(y_test, y_pred)
-#fig, ax = plt.subplots(figsize=(10,10))
-#sns.heatmap(conf_mat, annot=True, fmt='d',
- #           xticklabels=category_id_df.category.values, yticklabels=category_id_df.category.values)
-#plt.ylabel('Actual')
-#plt.xlabel('Predicted')
-#plt.show()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
