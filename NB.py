@@ -7,20 +7,10 @@
 import pandas as pd
 import json    
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.feature_selection import chi2
-import matplotlib.pyplot as plt
-import seaborn as sns
-from io import StringIO
-from IPython.display import display
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import LinearSVC
 from sklearn.model_selection import cross_val_score
-from sklearn.metrics import confusion_matrix
-from sklearn import metrics
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
