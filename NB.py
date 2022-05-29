@@ -20,7 +20,7 @@ from read_data import read_clean_data
 #CALL read_clean_data function to have all cleaned articles along with all nummirc ids mapped to categories 
 articles_df , category_to_id  = read_clean_data();
 
-
+#change features to numeric values
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf = TfidfVectorizer(analyzer='word' ,sublinear_tf=True, min_df=5, norm='l2', encoding='latin-1', ngram_range=(1, 2), stop_words='english')
@@ -30,13 +30,13 @@ labels = articles_df.cat_id
 
 model =MultinomialNB()
 training_articles, testing_articles, training_labeles, testing_labels , indices_train, indices_test = train_test_split(features, labels, articles_df.index, test_size=0.33, random_state=0)
-
+#fit the model
 clf = MultinomialNB().fit(training_articles, training_labeles)
 predicted_labels = (clf.predict((testing_articles)))
 df_res = pd.DataFrame({'Actual': testing_labels, 'Predicted': predicted_labels})
 from sklearn.metrics import accuracy_score
 
-
+# print accuracy 
 print("NB accuracy ",accuracy_score(testing_labels,predicted_labels))
 
 
